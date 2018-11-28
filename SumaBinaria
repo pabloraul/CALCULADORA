@@ -1,0 +1,30 @@
+//No funciona con numeros negativos
+import java.util.Scanner;
+public class sumabinaria {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner entrada=new Scanner(System.in);
+		int a;
+		int b;
+		int c;
+		String resultado;
+		System.out.println("ingrese 1er numero:");
+		a=entrada.nextInt();
+		System.out.println("ingrese 2do numero:");
+		b=entrada.nextInt();
+		//Aqui suma binaria
+		resultado=Suma(a,b);
+		System.out.println("La suma binaria es: "+resultado);
+		//Aqui Suma Numerica
+		c=a+b;
+		System.out.println("La suma numerica es: "+c);
+		entrada.close();
+	
+	}
+	public static String Suma(int a, int b) {
+		int c = a + b;
+		String resultado = Integer.toString(c, 2);
+		return resultado;
+	}
+}
