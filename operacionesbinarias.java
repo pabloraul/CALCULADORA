@@ -7,16 +7,18 @@ public class operacionesbinarias {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-	        String sell;
+	       String sell;
 		String stBinario;
 		char vecBinario[];
 		int Binario;
 		int posicionElevada;
 		int strLargo;
 		int numero;
-	        int exp=0;
-                int digito;
-	        boolean band;
+	    int exp=0;
+        int digito;
+	    boolean band;
+    
+    double binario;
         Scanner sec = new Scanner(System.in);
         System.out.println("1.-: CONVERSION DEC A BINARIO"
         		     + "\n 2.-: CONVERSION BINARIO A DEC");
@@ -26,24 +28,26 @@ public class operacionesbinarias {
         case("1"):
         	  System.out.println("A seleccionado DEC A BINARIO"
 					  + "\n Ingrese numero:");
-                 numero = sec.nextInt();
-                 while(numero<0);
+        numero = sec.nextInt();
+        while(numero<0);
 
-		exp=0;
-		binario=0;
-		while(numero!=0){
+        exp=0;
+        binario=0;
+        while(numero!=0){
         	
                 digito = numero % 2;            
                 binario = binario + digito * Math.pow(10, exp);   
                 exp++;
                 numero = numero/2;
-
-		}
-		System.out.printf("Binario: %.0f %n", binario);
-		break;
-
+                
+        }
+        System.out.printf("SU BINARIO ES: %.0f %n", binario);
+        break;
+        
         case("2"):
-        	double aux;
+        	
+        	
+		double aux;
 		String mensajeError = "Numero binario NO VALIDO";
 		System.out.println("A seleccionado BINARIO A DEC"
 				  + "\n Ingrese numero BINARIO:");
@@ -59,7 +63,7 @@ public class operacionesbinarias {
 		vecBinario = new char[strLargo];
 
 		for (int i=0; i<strLargo; i++){ 
-		vecBinario[i]=strBinario.charAt(i);
+		vecBinario[i]=stBinario.charAt(i);
 
 		}
 
@@ -78,11 +82,11 @@ public class operacionesbinarias {
 		Binario = Binario + digito*posicionElevada; 
 		band = false;
 		       }
-		    }
+			}
 		}
-	        while (band == true);
+		
+        while (band == true);
 		System.out.println("SU DECIMAL ES:"+Binario);
-       
 	
 
 		in.close();
