@@ -55,7 +55,7 @@ public class operacionesbinarias {
 		
 
 		stBinario = in.nextLine();
-		stLargo = stBinario.length();
+		strLargo = stBinario.length();
 		vecBinario = new char[strLargo];
 
 		for (int i=0; i<strLargo; i++){ 
