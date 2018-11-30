@@ -86,5 +86,5 @@ public class lista_acendente_descendente {
 
 	
 	
+}                                        //falta leer tipos de textos;
 
-}
