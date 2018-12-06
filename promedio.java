@@ -24,7 +24,7 @@ public class promedio {
             suma = suma + nota;
             prom= prom + suma /notas;
              if (nota>70.0){System.out.println("error");
-             
+             break;
              }
         else{System.out.println("promedio:"+prom );}
             } 
