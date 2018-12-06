@@ -15,7 +15,7 @@ public class ordentexto {
 		String [] ar=new String [a];
 		entrada.nextLine();
 		while(cont!=a){
-			System.out.println("ingrese palabra o numero");
+			System.out.println("ingrese palabra");
 			tex=entrada.nextLine();
 			ar[cont]=tex;
 			cont++;
