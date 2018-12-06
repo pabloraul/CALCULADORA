@@ -8,8 +8,8 @@ public class promedio {
 		// TODO Auto-generated method stub
 	Scanner sed =  new Scanner(System.in);
         int notas;
-        int nota;
-        int suma;
+        double nota;
+        double suma;
         double prom=0;    
         System.out.print("ingrese cantidad de notas:");//rango entre 10 y 70
         notas = sed.nextInt();
@@ -23,7 +23,7 @@ public class promedio {
                  
             suma = suma + nota;
             prom= prom + suma /notas;
-             if (nota>70){System.out.println("error");
+             if (nota>70.0){System.out.println("error");
              
              }
         else{System.out.println("promedio:"+prom );}
