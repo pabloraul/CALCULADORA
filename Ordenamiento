@@ -1,0 +1,117 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class ordenamiento {
+	public static void main(String[]args){
+		int a;
+		int b;
+		int c;
+		int cont=0;
+		int num;
+		String tex;
+		int aux;
+		String aux1;
+		Scanner entrada=new Scanner(System.in);
+		System.out.println("Seleccione Tipo de Ordenamiento (1) o (2)");
+		System.out.println("(1)ordenamiento numerico");
+		System.out.println("(2)ordenamiento texto");
+		c=entrada.nextInt();
+		switch(c){
+			case(1):
+				System.out.println("ingrese N° de datos a ordenar");
+				a=entrada.nextInt();
+				int [] ar=new int[a];
+				while(cont!=a){
+					System.out.println("ingrese numero");
+					num= entrada.nextInt();
+					ar[cont]=num;
+					cont++;
+				}
+				System.out.println(Arrays.toString(ar));
+				System.out.println("*******************");
+				System.out.println("*Elija orden 1 o 2*");
+				System.out.println("*******************");
+				System.out.println("(1)Orden ascendente");
+				System.out.println("(2)Orden descendente");
+				b=entrada.nextInt();
+				switch (b){
+				case(1):
+					for (int i=0;i<=a;i++){
+						for (int j=0;j<=(a-2);j++){
+							if(ar[j]>ar[j+1]){
+							aux=ar[j];
+							ar[j]=ar[j+1];
+							ar[j+1]=aux;
+							
+							}	
+						}
+					}
+					System.out.println(Arrays.toString(ar));
+					break;
+				case(2):
+					for (int i=0;i<=a;i++){
+						for (int j=0;j<=(a-2);j++){
+							if(ar[j]<ar[j+1]){
+							aux=ar[j];
+							ar[j]=ar[j+1];
+							ar[j+1]=aux;
+							
+							}	
+						}
+					
+					}
+					System.out.println(Arrays.toString(ar));
+					break;
+				}
+			case(2):
+				System.out.println("Ingrese cantidad de datos a ordenar");
+				a=entrada.nextInt();
+				String [] or=new String [a];
+				entrada.nextLine();
+				while(cont!=a){
+					System.out.println("ingrese palabra");
+					tex=entrada.nextLine();
+					or[cont]=tex;
+					cont++;
+				}
+				System.out.println(Arrays.toString(or));
+				System.out.println("*******************");
+				System.out.println("*Elija orden 1 o 2*");
+				System.out.println("*******************");
+				System.out.println("(1)Orden ascendente");
+				System.out.println("(2)Orden descendente");
+				b=entrada.nextInt();
+				switch(b){
+				case(1):
+					for (int i=0;i<=a;i++){
+						for (int j=0;j<=(a-2);j++){
+							if(or[j].compareTo(or[j+1])>0){
+							aux1=or[j];
+							or[j]=or[j+1];
+							or[j+1]=aux1;
+							
+							}	
+						}
+					}
+					System.out.println(Arrays.toString(or));
+					break;
+				case(2):
+					for (int i=0;i<=a;i++){
+						for (int j=0;j<=(a-2);j++){
+							if(or[j].compareTo(or[j+1])<0){
+							aux1=or[j];
+							or[j]=or[j+1];
+							or[j+1]=aux1;
+							
+							}	
+						}
+					}
+					System.out.println(Arrays.toString(or));
+					break;
+				}
+		}
+		
+		
+		
+	entrada.close();
+	}
+}
