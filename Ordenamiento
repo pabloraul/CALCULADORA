@@ -88,7 +88,6 @@ public class ordenamiento {
 							aux1=or[j];
 							or[j]=or[j+1];
 							or[j+1]=aux1;
-							
 							}	
 						}
 					}
@@ -101,17 +100,13 @@ public class ordenamiento {
 							aux1=or[j];
 							or[j]=or[j+1];
 							or[j+1]=aux1;
-							
 							}	
 						}
 					}
 					System.out.println(Arrays.toString(or));
 					break;
 				}
-		}
-		
-		
-		
+		}	
 	entrada.close();
 	}
 }
