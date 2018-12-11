@@ -16,13 +16,14 @@ public class promedio {
 	        int notas;
 	        double nota;
 	        double suma;
-	        double prom=0;    
+	        double prom=0;
+	 
 	        System.out.print("ingrese cantidad de notas:"+"\n"); //rango entre 10 y 70
 	        notas = sed.nextInt();
-	        
+	   
 	        for(int i=1; i<= notas; i++){
 	            System.out.println("ingrese nota"+" "+i+" "+"de"+" "+notas+":");
-
+	            
 	            nota = sed.nextInt();  
 	            
 	            suma = 0;
@@ -32,16 +33,17 @@ public class promedio {
 	             if (nota>70.0){System.out.println("error");
 	             break;
 	             }
-	        else{System.out.println("promedio de alumno: "+k+" es "+prom+"\n" );}
+	        else{System.out.println("promedio de alumno "+k+": es "+prom+"\n" );}
 	            } 
+	        }
+			
+	        	
 	        
-		}
+	        
+		
 		
 		variable.close();
 		
-        
 	}
 
 }
-
-
