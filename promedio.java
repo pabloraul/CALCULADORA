@@ -6,7 +6,7 @@ public class promedio {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	Scanner variable=new Scanner(System.in);
+			Scanner variable=new Scanner(System.in);
 		System.out.println("Ingrese cantidad de alumnos: ");
 		int alumnos=variable.nextInt();
 		
@@ -20,7 +20,17 @@ public class promedio {
 	 
 	        System.out.print("ingrese cantidad de notas:"+"\n"); //rango entre 10 y 70
 	        notas = sed.nextInt();
-	   
+	        
+	        System.out.println("¿Desea ponderar las notas?");
+	        
+	        System.out.println("(1)Si");
+	        
+	        System.out.println("(2)No");
+	        int p=variable.nextInt();
+	        
+	        if(p==2) {
+	       
+	        
 	        for(int i=1; i<= notas; i++){
 	            System.out.println("ingrese nota"+" "+i+" "+"de"+" "+notas+":");
 	            
@@ -36,14 +46,24 @@ public class promedio {
 	        else{System.out.println("promedio de alumno "+k+": es "+prom+"\n" );}
 	            } 
 	        }
+	        if(p==1) {
+	        	for( int s=1;s<=notas;s++) {
+	        		System.out.println("ingrese nota "+s+" de "+notas);
+	        		int n=variable.nextInt();
+	        		System.out.println("Indique ponderacion nota "+s);	        		
+	        		double ponderacion = 0;
+	        		ponderacion=variable.nextDouble();
+	        			        		
+	        		double ponderado = n*(ponderacion/100);	
+	        		
+	        	}	        	
+	        }
+			}
 			
-	        	
-	        
-	        
-		
 		
 		variable.close();
 		
 	}
 
 }
+
